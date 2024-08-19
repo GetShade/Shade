@@ -1,5 +1,8 @@
 # Shade
 
+![GetShade](https://github.com/user-attachments/assets/e112a2e9-c7ed-460b-8a86-ad394a4faf09)
+
+
 #### Shade is a sleek and powerful macOS photo editing application designed to help you easily make precise color adjustments, tone changes, and other images enhancements. Whether you’re a professional photographer or a casual user, Shade provides intuitive tools to elevate your photos effortlessly.
 
 ## Features
