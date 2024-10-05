@@ -35,4 +35,4 @@ Shade is licensed under the MIT License. See the LICENSE file for more informati
 
 ## Contact
 
-For support or inquiries, please contact oradwan037@gmail.com || .
+For support or inquiries, please contact oradwan037@gmail.com || aragab22@gmail.com.
