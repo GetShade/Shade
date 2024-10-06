@@ -29,6 +29,7 @@
 		D09699632CB2E24D0035BEDD /* ColorMonochrome.metal in Sources */ = {isa = PBXBuildFile; fileRef = D09699622CB2E24D0035BEDD /* ColorMonochrome.metal */; };
 		D09699662CB2E4960035BEDD /* ColorMonochromeMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09699652CB2E4960035BEDD /* ColorMonochromeMetalRenderer.swift */; };
 		D09699682CB2E5260035BEDD /* ColorMonochromeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09699672CB2E5260035BEDD /* ColorMonochromeView.swift */; };
+		D096996C2CB2EE8B0035BEDD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096996B2CB2EE8B0035BEDD /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		D09699622CB2E24D0035BEDD /* ColorMonochrome.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ColorMonochrome.metal; sourceTree = "<group>"; };
 		D09699652CB2E4960035BEDD /* ColorMonochromeMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMonochromeMetalRenderer.swift; sourceTree = "<group>"; };
 		D09699672CB2E5260035BEDD /* ColorMonochromeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMonochromeView.swift; sourceTree = "<group>"; };
+		D096996B2CB2EE8B0035BEDD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		0493E6D42C72981800BA9F56 /* Shade */ = {
 			isa = PBXGroup;
 			children = (
+				D096996A2CB2EE030035BEDD /* Extensions */,
 				D09699392CB295C00035BEDD /* MetalViews */,
 				D09699332CB2916A0035BEDD /* MetalFiles */,
 				0493E6D52C72981800BA9F56 /* ShadeApp.swift */,
@@ -228,6 +231,14 @@
 				D09699672CB2E5260035BEDD /* ColorMonochromeView.swift */,
 			);
 			path = ColorMonochrome;
+			sourceTree = "<group>";
+		};
+		D096996A2CB2EE030035BEDD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D096996B2CB2EE8B0035BEDD /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D096994E2CB2B6490035BEDD /* ReplaceColor.metal in Sources */,
+				D096996C2CB2EE8B0035BEDD /* Extensions.swift in Sources */,
 				D096995C2CB2DDA40035BEDD /* Grain.metal in Sources */,
 				D09699382CB293260035BEDD /* ChannelMixerMetalRenderer.swift in Sources */,
 				D09699512CB2B8580035BEDD /* ReplaceColortMetalRenderer.swift in Sources */,

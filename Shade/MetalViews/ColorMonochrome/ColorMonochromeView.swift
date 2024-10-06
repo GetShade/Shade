@@ -80,27 +80,6 @@ struct ColorMonochromeView: View {
 }
 
 
-extension Color {
-    func toSimdFloat4() -> SIMD4<Float> {
-        // Convert SwiftUI Color to NSColor
-        let nsColor = NSColor(self)
-
-        // Extract RGBA components
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
-
-        // Ensure the color is in device RGB color space
-        if ((nsColor.usingColorSpace(.deviceRGB)?.getRed(&red, green: &green, blue: &blue, alpha: &alpha)) != nil) == true {
-            // Convert CGFloat (0-1) to Float (0-1) and create SIMD4
-            return SIMD4<Float>(Float(red), Float(green), Float(blue), Float(alpha))
-        } else {
-            // Fallback to transparent black if conversion fails
-            return SIMD4<Float>(0, 0, 0, 0)
-        }
-    }
-}
 
 #Preview {
     ColorMonochromeView()
