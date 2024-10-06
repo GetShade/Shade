@@ -17,6 +17,9 @@
 		D09699352CB2917C0035BEDD /* ChannelMixer.metal in Sources */ = {isa = PBXBuildFile; fileRef = D09699342CB2917C0035BEDD /* ChannelMixer.metal */; };
 		D09699382CB293260035BEDD /* ChannelMixerMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09699372CB293260035BEDD /* ChannelMixerMetalRenderer.swift */; };
 		D096993B2CB295D40035BEDD /* ChannelMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096993A2CB295D40035BEDD /* ChannelMixerView.swift */; };
+		D09699472CB2AB1C0035BEDD /* VignetteShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = D09699462CB2AB1C0035BEDD /* VignetteShader.metal */; };
+		D09699492CB2AB430035BEDD /* VignetteMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09699482CB2AB430035BEDD /* VignetteMetalRenderer.swift */; };
+		D096994C2CB2AE8B0035BEDD /* VignetteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096994B2CB2AE8B0035BEDD /* VignetteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		D09699342CB2917C0035BEDD /* ChannelMixer.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ChannelMixer.metal; sourceTree = "<group>"; };
 		D09699372CB293260035BEDD /* ChannelMixerMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMixerMetalRenderer.swift; sourceTree = "<group>"; };
 		D096993A2CB295D40035BEDD /* ChannelMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMixerView.swift; sourceTree = "<group>"; };
+		D09699462CB2AB1C0035BEDD /* VignetteShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = VignetteShader.metal; sourceTree = "<group>"; };
+		D09699482CB2AB430035BEDD /* VignetteMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VignetteMetalRenderer.swift; sourceTree = "<group>"; };
+		D096994B2CB2AE8B0035BEDD /* VignetteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VignetteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				D09699342CB2917C0035BEDD /* ChannelMixer.metal */,
+				D09699462CB2AB1C0035BEDD /* VignetteShader.metal */,
 			);
 			path = MetalFiles;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 		D09699392CB295C00035BEDD /* MetalViews */ = {
 			isa = PBXGroup;
 			children = (
+				D096994A2CB2AB990035BEDD /* Vignette */,
 				D096993C2CB29BBC0035BEDD /* ChannelMixer */,
 			);
 			path = MetalViews;
@@ -160,6 +168,15 @@
 				D096993A2CB295D40035BEDD /* ChannelMixerView.swift */,
 			);
 			path = ChannelMixer;
+			sourceTree = "<group>";
+		};
+		D096994A2CB2AB990035BEDD /* Vignette */ = {
+			isa = PBXGroup;
+			children = (
+				D09699482CB2AB430035BEDD /* VignetteMetalRenderer.swift */,
+				D096994B2CB2AE8B0035BEDD /* VignetteView.swift */,
+			);
+			path = Vignette;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +311,11 @@
 			files = (
 				D09699382CB293260035BEDD /* ChannelMixerMetalRenderer.swift in Sources */,
 				0493E6D82C72981800BA9F56 /* ContentView.swift in Sources */,
+				D09699492CB2AB430035BEDD /* VignetteMetalRenderer.swift in Sources */,
 				D09699352CB2917C0035BEDD /* ChannelMixer.metal in Sources */,
 				D096993B2CB295D40035BEDD /* ChannelMixerView.swift in Sources */,
+				D096994C2CB2AE8B0035BEDD /* VignetteView.swift in Sources */,
+				D09699472CB2AB1C0035BEDD /* VignetteShader.metal in Sources */,
 				0493E6D62C72981800BA9F56 /* ShadeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
