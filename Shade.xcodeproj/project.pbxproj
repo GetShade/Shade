@@ -14,6 +14,9 @@
 		0493E6E82C72981900BA9F56 /* ShadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6E72C72981900BA9F56 /* ShadeTests.swift */; };
 		0493E6F22C72981900BA9F56 /* ShadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6F12C72981900BA9F56 /* ShadeUITests.swift */; };
 		0493E6F42C72981900BA9F56 /* ShadeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6F32C72981900BA9F56 /* ShadeUITestsLaunchTests.swift */; };
+		D09699352CB2917C0035BEDD /* ChannelMixer.metal in Sources */ = {isa = PBXBuildFile; fileRef = D09699342CB2917C0035BEDD /* ChannelMixer.metal */; };
+		D09699382CB293260035BEDD /* ChannelMixerMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09699372CB293260035BEDD /* ChannelMixerMetalRenderer.swift */; };
+		D096993B2CB295D40035BEDD /* ChannelMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096993A2CB295D40035BEDD /* ChannelMixerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		0493E6ED2C72981900BA9F56 /* ShadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0493E6F12C72981900BA9F56 /* ShadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeUITests.swift; sourceTree = "<group>"; };
 		0493E6F32C72981900BA9F56 /* ShadeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D09699342CB2917C0035BEDD /* ChannelMixer.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ChannelMixer.metal; sourceTree = "<group>"; };
+		D09699372CB293260035BEDD /* ChannelMixerMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMixerMetalRenderer.swift; sourceTree = "<group>"; };
+		D096993A2CB295D40035BEDD /* ChannelMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMixerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		0493E6D42C72981800BA9F56 /* Shade */ = {
 			isa = PBXGroup;
 			children = (
+				D09699392CB295C00035BEDD /* MetalViews */,
+				D09699332CB2916A0035BEDD /* MetalFiles */,
 				0493E6D52C72981800BA9F56 /* ShadeApp.swift */,
 				0493E6D72C72981800BA9F56 /* ContentView.swift */,
 				0493E6D92C72981900BA9F56 /* Assets.xcassets */,
@@ -127,6 +135,31 @@
 				0493E6F32C72981900BA9F56 /* ShadeUITestsLaunchTests.swift */,
 			);
 			path = ShadeUITests;
+			sourceTree = "<group>";
+		};
+		D09699332CB2916A0035BEDD /* MetalFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D09699342CB2917C0035BEDD /* ChannelMixer.metal */,
+			);
+			path = MetalFiles;
+			sourceTree = "<group>";
+		};
+		D09699392CB295C00035BEDD /* MetalViews */ = {
+			isa = PBXGroup;
+			children = (
+				D096993C2CB29BBC0035BEDD /* ChannelMixer */,
+			);
+			path = MetalViews;
+			sourceTree = "<group>";
+		};
+		D096993C2CB29BBC0035BEDD /* ChannelMixer */ = {
+			isa = PBXGroup;
+			children = (
+				D09699372CB293260035BEDD /* ChannelMixerMetalRenderer.swift */,
+				D096993A2CB295D40035BEDD /* ChannelMixerView.swift */,
+			);
+			path = ChannelMixer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09699382CB293260035BEDD /* ChannelMixerMetalRenderer.swift in Sources */,
 				0493E6D82C72981800BA9F56 /* ContentView.swift in Sources */,
+				D09699352CB2917C0035BEDD /* ChannelMixer.metal in Sources */,
+				D096993B2CB295D40035BEDD /* ChannelMixerView.swift in Sources */,
 				0493E6D62C72981800BA9F56 /* ShadeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
