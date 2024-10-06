@@ -67,7 +67,7 @@ struct ChannelMixerView: View {
     
     var body: some View {
         VStack {
-            ChannelMixerMetalView(image: NSImage(named: "city")!,
+            ChannelMixerMetalView(image: NSImage(resource: .person2),
                       redMix: redMix, greenMix: greenMix, blueMix: blueMix)
             .frame(height: 300)
             

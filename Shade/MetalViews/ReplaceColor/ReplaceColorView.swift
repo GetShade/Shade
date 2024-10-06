@@ -68,11 +68,11 @@ struct ReplaceColorView: View {
     var body: some View {
         VStack {
             ReplaceColorMetalView(image:image,
-                                  replacmentColor: targetColor,
-                                  targetColor: replacementColor)
+                                  replacmentColor: replacementColor,
+                                  targetColor: targetColor)
             
-            ColorPicker("Select Color", selection: $targetColor)
-            ColorPicker("Select Color", selection: $replacementColor)
+            ColorPicker("target Color", selection: $targetColor)
+            ColorPicker("replacment Color", selection: $replacementColor)
         }
     }
 }
