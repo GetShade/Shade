@@ -30,14 +30,16 @@ class VignetteMetalRenderer: NSObject {
     }
     
     private func setupVertexBuffer() {
-        let vertices: [Float] = [
-            -1.0, -1.0, 0.0, 0.0, // Bottom left
-             1.0, -1.0, 0.0, 1.0, // Bottom right
-             -1.0,  1.0, 0.0, 0.0, // Top left
-             1.0,  1.0, 0.0, 1.0  // Top right
+        let quadVertices: [Vertex] = [
+            Vertex(position: [-1.0, -1.0], textureCoordinate: [0.0, 1.0]),
+            Vertex(position: [ 1.0, -1.0], textureCoordinate: [1.0, 1.0]),
+            Vertex(position: [-1.0,  1.0], textureCoordinate: [0.0, 0.0]),
+            Vertex(position: [ 1.0,  1.0], textureCoordinate: [1.0, 0.0])
         ]
         
-        vertexBuffer = device.makeBuffer(bytes: vertices, length: MemoryLayout<Float>.size * vertices.count, options: [])
+        vertexBuffer = device.makeBuffer(bytes: quadVertices,
+                                         length: MemoryLayout<Vertex>.stride * quadVertices.count,
+                                         options: [])
     }
     
     func setupPipeline() {

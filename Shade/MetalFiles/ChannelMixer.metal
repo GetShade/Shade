@@ -18,7 +18,7 @@ struct VertexIn {
 };
 
 // Vertex shader: transforms vertices and passes texture coordinates to the fragment shader
-vertex VertexOut vertexShader(VertexIn in [[stage_in]]) {
+vertex VertexOut channelMixerVertexShader(VertexIn in [[stage_in]]) {
     VertexOut out;
     
     // Pass through the position (already in clip space for a full-screen quad)
