@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 import MetalKit
 
-class VignetteMetalRenderer: NSObject {
+class VignetteMetalRenderer: NSObject,MTKViewDelegate {
+    
+    
     private var device: MTLDevice!
     private var commandQueue: MTLCommandQueue!
     private var pipelineState: MTLRenderPipelineState!
@@ -102,4 +104,6 @@ class VignetteMetalRenderer: NSObject {
             texture = try? textureLoader.newTexture(cgImage: cgImage, options: nil)
         }
     }
+    
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
 }

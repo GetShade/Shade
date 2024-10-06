@@ -83,4 +83,56 @@ struct ChannelMixerView: View {
 #Preview {
     ChannelMixerView()
 }
-
+//
+////
+////  sharpenAndContrast.metal
+////  Shade
+////
+////  Created by Ahmed Ragab on 06/10/2024.
+////
+//
+//#include <metal_stdlib>
+//using namespace metal;
+//
+//
+//// Sharpening kernel
+//constant float kernelValues[3][3] = {
+//    {0.0, -1.0, 0.0},
+//    {-1.0, 5.0, -1.0},
+//    {0.0, -1.0, 0.0}
+//};
+//
+//struct VertexOut {
+//    float4 postion [[position]];
+//    float2 textureCoordinate;
+//};
+//
+//struct VertexIn {
+//    float4 position [[attribute(0)]];
+//    float2 textureCoordinate [[attribute(1)]];
+//};
+//
+//fragment float4 sharpenLuminance(VertexIn in [[stage_in]],
+//                                  texture2d<float> inputTexture [[texture(0)]],
+//                                  sampler inputSampler [[sampler(0)]],
+//                                  constant float& strength [[buffer(1)]]) {
+//     // Get texture coordinates
+//     float2 texCoords = in.textureCoordinate;
+//     
+//     // Get the texture size
+//     float2 texSize = float2(inputTexture.get_width(), inputTexture.get_height());
+//     
+//     float4 color = float4(0.0);
+//     
+//     // Apply the sharpening kernel
+//     for (int y = -1; y <= 1; y++) {
+//         for (int x = -1; x <= 1; x++) {
+//             float2 offset = float2(x, y) / texSize; // Normalized offset
+//             float4 sampleColor = inputTexture.sample(inputSampler, texCoords + offset);
+//             color += sampleColor * kernelValues[y + 1][x + 1];
+//         }
+//     }
+//
+//     // Multiply by strength to control sharpening effect
+//     return color * strength;
+// }

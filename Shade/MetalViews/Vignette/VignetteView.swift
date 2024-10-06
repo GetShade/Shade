@@ -21,7 +21,7 @@ struct VignetteViewMetalView : NSViewRepresentable {
     func makeNSView(context: Context) -> MTKView {
         let device = MTLCreateSystemDefaultDevice()!
         let mtkView = MTKView(frame: .zero, device: device)
-        mtkView.delegate = context.coordinator
+        mtkView.delegate = context.coordinator.renderer
         mtkView.enableSetNeedsDisplay = true
         mtkView.isPaused = true
 //        mtkView.autoResizeDrawable = true
@@ -33,8 +33,7 @@ struct VignetteViewMetalView : NSViewRepresentable {
         uiView.setNeedsDisplay(uiView.frame)
     }
     
-    class Coordinator: NSObject, MTKViewDelegate {
-        func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
+    class Coordinator: NSObject {
         
         func draw(in view: MTKView) {
             renderer.draw(in: view)
@@ -65,11 +64,11 @@ struct VignetteView: View {
     var body: some View {
         VStack {
             // Vignette view with the image and the effect applied
-            VignetteViewMetalView(image: NSImage(resource: .person2),
+            VignetteViewMetalView(image: NSImage(resource: .person),
                                   radius: radius,
                                   softness: softness)
                 .frame(width: 300, height: 300)
-//                .border(Color.black, width: 1)
+                .border(Color.red, width: 1)
 
             // Sliders for adjusting radius and softness
             VStack {
