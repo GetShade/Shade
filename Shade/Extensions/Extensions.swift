@@ -8,6 +8,104 @@
 import SwiftUI
 import Foundation
 
+#if canImport(UIKit)
+import UIKit
+extension UIImage {
+    func pixelBuffer() -> CVPixelBuffer? {
+        let options: [String: Any] = [
+            kCVPixelBufferCGImageCompatibilityKey as String: kCFBooleanTrue!,
+            kCVPixelBufferCGBitmapContextCompatibilityKey as String: kCFBooleanTrue!
+        ]
+        var pixelBuffer: CVPixelBuffer?
+        let width = Int(size.width)
+        let height = Int(size.height)
+        
+        // Create the pixel buffer
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, width, height, kCVPixelFormatType_32ARGB, options as CFDictionary, &pixelBuffer)
+        guard status == kCVReturnSuccess, let buffer = pixelBuffer else {
+            print("Error: Unable to create CVPixelBuffer")
+            return nil
+        }
+        
+        // Lock the pixel buffer base address
+        CVPixelBufferLockBaseAddress(buffer, .init(rawValue: 0))
+        
+        // Get the base address of the pixel buffer
+        guard let context = CGContext(data: CVPixelBufferGetBaseAddress(buffer),
+                                      width: width,
+                                      height: height,
+                                      bitsPerComponent: 8,
+                                      bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),
+                                      space: CGColorSpaceCreateDeviceRGB(),
+                                      bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue) else {
+            CVPixelBufferUnlockBaseAddress(buffer, .init(rawValue: 0))
+            print("Error: Unable to create CGContext")
+            return nil
+        }
+        
+        // Draw the UIImage into the pixel buffer
+        UIGraphicsPushContext(context)
+        draw(in: CGRect(origin: .zero, size: size))
+        UIGraphicsPopContext()
+        
+        // Unlock the pixel buffer base address
+        CVPixelBufferUnlockBaseAddress(buffer, .init(rawValue: 0))
+        
+        return buffer
+    }
+}
+#endif
+
+#if canImport(AppKit)
+import AppKit
+extension NSImage {
+    func pixelBuffer() -> CVPixelBuffer? {
+        guard let cgImage = self.cgImage(forProposedRect: nil, context: nil, hints: nil) else {
+            print("Error: Unable to convert NSImage to CGImage")
+            return nil
+        }
+        
+        let options: [String: Any] = [
+            kCVPixelBufferCGImageCompatibilityKey as String: kCFBooleanTrue!,
+            kCVPixelBufferCGBitmapContextCompatibilityKey as String: kCFBooleanTrue!
+        ]
+        var pixelBuffer: CVPixelBuffer?
+        let width = Int(cgImage.width)
+        let height = Int(cgImage.height)
+        
+        // Create the pixel buffer
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, width, height, kCVPixelFormatType_32ARGB, options as CFDictionary, &pixelBuffer)
+        guard status == kCVReturnSuccess, let buffer = pixelBuffer else {
+            print("Error: Unable to create CVPixelBuffer")
+            return nil
+        }
+        
+        // Lock the pixel buffer base address
+        CVPixelBufferLockBaseAddress(buffer, .init(rawValue: 0))
+        
+        // Get the base address of the pixel buffer
+        guard let context = CGContext(data: CVPixelBufferGetBaseAddress(buffer),
+                                      width: width,
+                                      height: height,
+                                      bitsPerComponent: 8,
+                                      bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),
+                                      space: CGColorSpaceCreateDeviceRGB(),
+                                      bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue) else {
+            CVPixelBufferUnlockBaseAddress(buffer, .init(rawValue: 0))
+            print("Error: Unable to create CGContext")
+            return nil
+        }
+        
+        // Draw the CGImage into the pixel buffer
+        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+        
+        // Unlock the pixel buffer base address
+        CVPixelBufferUnlockBaseAddress(buffer, .init(rawValue: 0))
+        
+        return buffer
+    }
+}
+#endif
 
 extension Color {
     func toSimdFloat4() -> SIMD4<Float> {

@@ -60,6 +60,9 @@
 		D0A4FCB22CB9EBD800719037 /* BumpTouchEffectMetalRendrer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4FCB12CB9EBD800719037 /* BumpTouchEffectMetalRendrer.swift */; };
 		D0A4FCB42CB9EF8900719037 /* SplashEffectMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4FCB32CB9EF8900719037 /* SplashEffectMetalRenderer.swift */; };
 		D0A4FCB62CB9F39B00719037 /* PinchEffectMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4FCB52CB9F39B00719037 /* PinchEffectMetalRenderer.swift */; };
+		D0D9EF832CC941820050A80B /* SuperResulotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF822CC941820050A80B /* SuperResulotionView.swift */; };
+		D0D9EF852CC9419A0050A80B /* CoreMLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF842CC9419A0050A80B /* CoreMLHelpers.swift */; };
+		D0D9EF872CC944F50050A80B /* RealesrGAN 512.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF862CC944F50050A80B /* RealesrGAN 512.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +140,9 @@
 		D0A4FCB12CB9EBD800719037 /* BumpTouchEffectMetalRendrer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumpTouchEffectMetalRendrer.swift; sourceTree = "<group>"; };
 		D0A4FCB32CB9EF8900719037 /* SplashEffectMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashEffectMetalRenderer.swift; sourceTree = "<group>"; };
 		D0A4FCB52CB9F39B00719037 /* PinchEffectMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchEffectMetalRenderer.swift; sourceTree = "<group>"; };
+		D0D9EF822CC941820050A80B /* SuperResulotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperResulotionView.swift; sourceTree = "<group>"; };
+		D0D9EF842CC9419A0050A80B /* CoreMLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelpers.swift; sourceTree = "<group>"; };
+		D0D9EF862CC944F50050A80B /* RealesrGAN 512.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "RealesrGAN 512.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 		0493E6D42C72981800BA9F56 /* Shade */ = {
 			isa = PBXGroup;
 			children = (
+				D0D9EF802CC941610050A80B /* CoreML */,
 				D096996A2CB2EE030035BEDD /* Extensions */,
 				D09699392CB295C00035BEDD /* MetalViews */,
 				D09699332CB2916A0035BEDD /* MetalFiles */,
@@ -423,8 +430,26 @@
 			isa = PBXGroup;
 			children = (
 				D096996B2CB2EE8B0035BEDD /* Extensions.swift */,
+				D0D9EF842CC9419A0050A80B /* CoreMLHelpers.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0D9EF802CC941610050A80B /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				D0D9EF812CC941710050A80B /* SuperResulotion */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		D0D9EF812CC941710050A80B /* SuperResulotion */ = {
+			isa = PBXGroup;
+			children = (
+				D0D9EF862CC944F50050A80B /* RealesrGAN 512.mlmodel */,
+				D0D9EF822CC941820050A80B /* SuperResulotionView.swift */,
+			);
+			path = SuperResulotion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,7 +617,9 @@
 				D09699632CB2E24D0035BEDD /* ColorMonochrome.metal in Sources */,
 				D0885A0F2CBB1A7F00F3C0B8 /* MotionBlurMetalRenderer.swift in Sources */,
 				D096993B2CB295D40035BEDD /* ChannelMixerView.swift in Sources */,
+				D0D9EF832CC941820050A80B /* SuperResulotionView.swift in Sources */,
 				D09699612CB2DF180035BEDD /* GrainView.swift in Sources */,
+				D0D9EF852CC9419A0050A80B /* CoreMLHelpers.swift in Sources */,
 				D0885A322CBB32C900F3C0B8 /* InvertColor.metal in Sources */,
 				D0885A362CBB339B00F3C0B8 /* ThresholdColor.metal in Sources */,
 				D096994C2CB2AE8B0035BEDD /* VignetteView.swift in Sources */,
@@ -605,6 +632,7 @@
 				D0885A112CBB1D2400F3C0B8 /* BokehBlurMetalRenderer.swift in Sources */,
 				D0885A152CBB250F00F3C0B8 /* BoxBlur.metal in Sources */,
 				D0A4FCB42CB9EF8900719037 /* SplashEffectMetalRenderer.swift in Sources */,
+				D0D9EF872CC944F50050A80B /* RealesrGAN 512.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
