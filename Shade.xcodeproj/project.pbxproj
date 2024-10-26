@@ -63,6 +63,8 @@
 		D0D9EF832CC941820050A80B /* SuperResulotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF822CC941820050A80B /* SuperResulotionView.swift */; };
 		D0D9EF852CC9419A0050A80B /* CoreMLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF842CC9419A0050A80B /* CoreMLHelpers.swift */; };
 		D0D9EF872CC944F50050A80B /* RealesrGAN 512.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF862CC944F50050A80B /* RealesrGAN 512.mlmodel */; };
+		D0FED8342CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D0FED8312CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel */; };
+		D0FED8352CCCFC9B00D98F57 /* PersonsSegmentaionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FED8322CCCFC9B00D98F57 /* PersonsSegmentaionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		D0D9EF822CC941820050A80B /* SuperResulotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperResulotionView.swift; sourceTree = "<group>"; };
 		D0D9EF842CC9419A0050A80B /* CoreMLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelpers.swift; sourceTree = "<group>"; };
 		D0D9EF862CC944F50050A80B /* RealesrGAN 512.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "RealesrGAN 512.mlmodel"; sourceTree = "<group>"; };
+		D0FED8312CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DeepLabV3 model.mlmodel"; sourceTree = "<group>"; };
+		D0FED8322CCCFC9B00D98F57 /* PersonsSegmentaionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsSegmentaionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,6 +442,7 @@
 		D0D9EF802CC941610050A80B /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				D0FED8332CCCFC9B00D98F57 /* PersonsBackgroundsRemoval */,
 				D0D9EF812CC941710050A80B /* SuperResulotion */,
 			);
 			path = CoreML;
@@ -450,6 +455,15 @@
 				D0D9EF822CC941820050A80B /* SuperResulotionView.swift */,
 			);
 			path = SuperResulotion;
+			sourceTree = "<group>";
+		};
+		D0FED8332CCCFC9B00D98F57 /* PersonsBackgroundsRemoval */ = {
+			isa = PBXGroup;
+			children = (
+				D0FED8312CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel */,
+				D0FED8322CCCFC9B00D98F57 /* PersonsSegmentaionView.swift */,
+			);
+			path = PersonsBackgroundsRemoval;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,6 +614,7 @@
 				D09699682CB2E5260035BEDD /* ColorMonochromeView.swift in Sources */,
 				D0885A0B2CBB121500F3C0B8 /* GaussianBlurEffectMetalRenderer.swift in Sources */,
 				D0A4FCB22CB9EBD800719037 /* BumpTouchEffectMetalRendrer.swift in Sources */,
+				D0FED8342CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel in Sources */,
 				D09699532CB2BF3A0035BEDD /* ReplaceColorView.swift in Sources */,
 				D0885A342CBB330600F3C0B8 /* HueAdjust.metal in Sources */,
 				D0885A2E2CBB31C400F3C0B8 /* ExposureAdjust.metal in Sources */,
@@ -619,6 +634,7 @@
 				D096993B2CB295D40035BEDD /* ChannelMixerView.swift in Sources */,
 				D0D9EF832CC941820050A80B /* SuperResulotionView.swift in Sources */,
 				D09699612CB2DF180035BEDD /* GrainView.swift in Sources */,
+				D0FED8352CCCFC9B00D98F57 /* PersonsSegmentaionView.swift in Sources */,
 				D0D9EF852CC9419A0050A80B /* CoreMLHelpers.swift in Sources */,
 				D0885A322CBB32C900F3C0B8 /* InvertColor.metal in Sources */,
 				D0885A362CBB339B00F3C0B8 /* ThresholdColor.metal in Sources */,
