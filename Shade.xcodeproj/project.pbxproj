@@ -63,6 +63,8 @@
 		D0D9EF832CC941820050A80B /* SuperResulotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF822CC941820050A80B /* SuperResulotionView.swift */; };
 		D0D9EF852CC9419A0050A80B /* CoreMLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF842CC9419A0050A80B /* CoreMLHelpers.swift */; };
 		D0D9EF872CC944F50050A80B /* RealesrGAN 512.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D0D9EF862CC944F50050A80B /* RealesrGAN 512.mlmodel */; };
+		D0E0353F2CCD19E60059F8B0 /* yolo11m-int8.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D0E0353E2CCD19E60059F8B0 /* yolo11m-int8.mlpackage */; };
+		D0EA4AA42CCD16EA00C0FC5E /* ObjectDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA4AA12CCD16EA00C0FC5E /* ObjectDetection.swift */; };
 		D0FED8342CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D0FED8312CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel */; };
 		D0FED8352CCCFC9B00D98F57 /* PersonsSegmentaionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FED8322CCCFC9B00D98F57 /* PersonsSegmentaionView.swift */; };
 /* End PBXBuildFile section */
@@ -145,6 +147,8 @@
 		D0D9EF822CC941820050A80B /* SuperResulotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperResulotionView.swift; sourceTree = "<group>"; };
 		D0D9EF842CC9419A0050A80B /* CoreMLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelpers.swift; sourceTree = "<group>"; };
 		D0D9EF862CC944F50050A80B /* RealesrGAN 512.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "RealesrGAN 512.mlmodel"; sourceTree = "<group>"; };
+		D0E0353E2CCD19E60059F8B0 /* yolo11m-int8.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "yolo11m-int8.mlpackage"; sourceTree = "<group>"; };
+		D0EA4AA12CCD16EA00C0FC5E /* ObjectDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDetection.swift; sourceTree = "<group>"; };
 		D0FED8312CCCFC9B00D98F57 /* DeepLabV3 model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "DeepLabV3 model.mlmodel"; sourceTree = "<group>"; };
 		D0FED8322CCCFC9B00D98F57 /* PersonsSegmentaionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsSegmentaionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -442,6 +446,7 @@
 		D0D9EF802CC941610050A80B /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA4AA32CCD16EA00C0FC5E /* ObjectDetection */,
 				D0FED8332CCCFC9B00D98F57 /* PersonsBackgroundsRemoval */,
 				D0D9EF812CC941710050A80B /* SuperResulotion */,
 			);
@@ -455,6 +460,15 @@
 				D0D9EF822CC941820050A80B /* SuperResulotionView.swift */,
 			);
 			path = SuperResulotion;
+			sourceTree = "<group>";
+		};
+		D0EA4AA32CCD16EA00C0FC5E /* ObjectDetection */ = {
+			isa = PBXGroup;
+			children = (
+				D0E0353E2CCD19E60059F8B0 /* yolo11m-int8.mlpackage */,
+				D0EA4AA12CCD16EA00C0FC5E /* ObjectDetection.swift */,
+			);
+			path = ObjectDetection;
 			sourceTree = "<group>";
 		};
 		D0FED8332CCCFC9B00D98F57 /* PersonsBackgroundsRemoval */ = {
@@ -620,12 +634,14 @@
 				D0885A2E2CBB31C400F3C0B8 /* ExposureAdjust.metal in Sources */,
 				D0885A1C2CBB260000F3C0B8 /* CircleSplash.metal in Sources */,
 				D0885A1E2CBB266500F3C0B8 /* pinch.metal in Sources */,
+				D0EA4AA42CCD16EA00C0FC5E /* ObjectDetection.swift in Sources */,
 				D0885A262CBB2E6000F3C0B8 /* HueAdjustMetalRenderer.swift in Sources */,
 				D0885A382CBB363B00F3C0B8 /* KaleidoscopeMetalRenderer.swift in Sources */,
 				0493E6D82C72981800BA9F56 /* ContentView.swift in Sources */,
 				D0885A3C2CBB37E400F3C0B8 /* Kaleidoscope.metal in Sources */,
 				D09699492CB2AB430035BEDD /* VignetteMetalRenderer.swift in Sources */,
 				D0A4FCAE2CB9DFC600719037 /* warpingLoupe.metal in Sources */,
+				D0E0353F2CCD19E60059F8B0 /* yolo11m-int8.mlpackage in Sources */,
 				D0885A422CBB413800F3C0B8 /* Brickwork.metal in Sources */,
 				D09699352CB2917C0035BEDD /* ChannelMixer.metal in Sources */,
 				D0885A402CBB3E6700F3C0B8 /* BrickworkMetalRenderer.swift in Sources */,
