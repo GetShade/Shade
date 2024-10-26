@@ -280,6 +280,22 @@ public func createCGImage(fromFloatArray features: MLMultiArray,
   }
 }
 
+extension MLMultiArray {
+  public func image(min: Double = 0,
+                      max: Double = 255,
+                      channel: Int? = nil,
+                      axes: (Int, Int, Int)? = nil) -> NSImage? {
+    guard let cgImg = cgImage(min: min, max: max, channel: channel, axes: axes) else {
+      return nil
+    }
+    
+    let size = NSSize(width: cgImg.width, height: cgImg.height)
+    let nsImage = NSImage(cgImage: cgImg, size: size)
+    
+    return nsImage
+  }
+}
+
 #if canImport(UIKit)
 
 import UIKit
