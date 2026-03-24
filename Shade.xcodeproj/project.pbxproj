@@ -3,14 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0493E6D62C72981800BA9F56 /* ShadeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6D52C72981800BA9F56 /* ShadeApp.swift */; };
-		0493E6D82C72981800BA9F56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6D72C72981800BA9F56 /* ContentView.swift */; };
-		0493E6DA2C72981900BA9F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0493E6D92C72981900BA9F56 /* Assets.xcassets */; };
-		0493E6DD2C72981900BA9F56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0493E6DC2C72981900BA9F56 /* Preview Assets.xcassets */; };
 		0493E6E82C72981900BA9F56 /* ShadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6E72C72981900BA9F56 /* ShadeTests.swift */; };
 		0493E6F22C72981900BA9F56 /* ShadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6F12C72981900BA9F56 /* ShadeUITests.swift */; };
 		0493E6F42C72981900BA9F56 /* ShadeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493E6F32C72981900BA9F56 /* ShadeUITestsLaunchTests.swift */; };
@@ -35,17 +31,16 @@
 
 /* Begin PBXFileReference section */
 		0493E6D22C72981800BA9F56 /* Shade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shade.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0493E6D52C72981800BA9F56 /* ShadeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeApp.swift; sourceTree = "<group>"; };
-		0493E6D72C72981800BA9F56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0493E6D92C72981900BA9F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0493E6DC2C72981900BA9F56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0493E6DE2C72981900BA9F56 /* Shade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shade.entitlements; sourceTree = "<group>"; };
 		0493E6E32C72981900BA9F56 /* ShadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0493E6E72C72981900BA9F56 /* ShadeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeTests.swift; sourceTree = "<group>"; };
 		0493E6ED2C72981900BA9F56 /* ShadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0493E6F12C72981900BA9F56 /* ShadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeUITests.swift; sourceTree = "<group>"; };
 		0493E6F32C72981900BA9F56 /* ShadeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D0D331292D29937600CE9A9E /* Shade */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Shade; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0493E6CF2C72981800BA9F56 /* Frameworks */ = {
@@ -75,7 +70,7 @@
 		0493E6C92C72981800BA9F56 = {
 			isa = PBXGroup;
 			children = (
-				0493E6D42C72981800BA9F56 /* Shade */,
+				D0D331292D29937600CE9A9E /* Shade */,
 				0493E6E62C72981900BA9F56 /* ShadeTests */,
 				0493E6F02C72981900BA9F56 /* ShadeUITests */,
 				0493E6D32C72981800BA9F56 /* Products */,
@@ -90,26 +85,6 @@
 				0493E6ED2C72981900BA9F56 /* ShadeUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0493E6D42C72981800BA9F56 /* Shade */ = {
-			isa = PBXGroup;
-			children = (
-				0493E6D52C72981800BA9F56 /* ShadeApp.swift */,
-				0493E6D72C72981800BA9F56 /* ContentView.swift */,
-				0493E6D92C72981900BA9F56 /* Assets.xcassets */,
-				0493E6DE2C72981900BA9F56 /* Shade.entitlements */,
-				0493E6DB2C72981900BA9F56 /* Preview Content */,
-			);
-			path = Shade;
-			sourceTree = "<group>";
-		};
-		0493E6DB2C72981900BA9F56 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0493E6DC2C72981900BA9F56 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		0493E6E62C72981900BA9F56 /* ShadeTests */ = {
@@ -143,6 +118,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D0D331292D29937600CE9A9E /* Shade */,
 			);
 			name = Shade;
 			productName = Shade;
@@ -233,8 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0493E6DD2C72981900BA9F56 /* Preview Assets.xcassets in Resources */,
-				0493E6DA2C72981900BA9F56 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0493E6D82C72981800BA9F56 /* ContentView.swift in Sources */,
-				0493E6D62C72981800BA9F56 /* ShadeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,10 +395,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Shade/Shade.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shade/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Z6V95G685;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -446,10 +422,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Shade/Shade.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shade/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Z6V95G685;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -468,7 +446,6 @@
 		0493E6FB2C72981900BA9F56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -486,7 +463,6 @@
 		0493E6FC2C72981900BA9F56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -504,7 +480,6 @@
 		0493E6FE2C72981900BA9F56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -520,7 +495,6 @@
 		0493E6FF2C72981900BA9F56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
